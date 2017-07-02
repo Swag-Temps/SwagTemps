@@ -1,6 +1,45 @@
 <html>
+<head>
+  <title> MY ASS </title>
+
+  <style>
+    .inForDaBooty {
+      height: 100%;
+      width: 100%;
+      color: white;
+      font-size: 20px;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .onlyWhiteLivesMatter {
+      font-size: 100px;
+    }
+  </style>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="inForDaBooty" align="left">
+    The current temperature in your location is:
+    <div id="swiggitySwooty" align="right" class="onlyWhiteLivesMatter"></div>
+
+    <p id="protectMyLegalAss" style="position: relative; top: 300px;">Temperature reported by AccuWeather Widget:</p>
+
+    <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+    <!--
+  By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+  -->
+    </a>
+    <div id="awcc1498660092079" class="aw-widget-current" data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1498660092079" style="position: relative; top: 300px;"></div>
+  </div>
+
+  <script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+
+  <script type="text/javascript">
+  setTimeout(function() {
+    document.getElementById("swiggitySwooty").innerHTML +=
+      parseInt(document.getElementsByClassName("aw-temperature-today")[0].firstChild.innerHTML) * 3 + "°S";
+  }, 2000);
+  </script>
 </body>
 </html>
